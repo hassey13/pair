@@ -12,7 +12,7 @@ class UserSignUp extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    const user = {name: this.refs.name.value, email: this.refs.email.value, userPassword: this.refs.userPassword.value, password_confirmation: this.refs.passwordConfirmation.value}
+    const user = {first_name: this.refs.first_name.value, avatar: this.refs.avatar.value, last_name: this.refs.last_name.value, email: this.refs.email.value, userPassword: this.refs.userPassword.value, password_confirmation: this.refs.passwordConfirmation.value}
 
     this.props.createUser(user)
   }
@@ -21,11 +21,13 @@ class UserSignUp extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input ref="name" placeholder="Enter Name" />
-          <input ref="email" placeholder="Enter Email" />
-          <input type="password" ref="userPassword" placeholder="Enter Password" />
-          <input type="password" ref="passwordConfirmation" placeholder="Enter Password" />
-          <button type="submit">Submit</button>
+          <input ref="email" placeholder="Enter Email" /><br/><br/>
+          <input type="password" ref="userPassword" placeholder="Enter Password" /><br/><br/>
+          <input type="password" ref="passwordConfirmation" placeholder="Enter Password" /><br/><br/>
+          <input ref="first_name" placeholder="First Name" /><br/><br/>
+          <input ref="last_name" placeholder="Last Name" /><br/><br/>
+          <input ref="avatar" placeholder="Avatar" /><br/><br/>
+          <button type="submit">Submit</button><br/><br/>
         </form>
       </div>
     )

@@ -10,5 +10,8 @@ export default (
     <Route path="signup" component={UserSignUp}>
 
     </Route>
+    <Route path="users" component={App}>
+
+    </Route>
   </Route>
 )
