@@ -6,8 +6,8 @@ import UserSignUp from './components/UserSignUp'
 
 
 export default (
-  <Route path="/" component={App}>
-    <Route path="signup" component={UserSignUp} />
-    <Route path="users" component={App} />
+  <Route path="/" component={ App }>
+    <Route path="signup" component={ UserSignUp } />
+    <Route path="users" component={ App } />
   </Route>
 )

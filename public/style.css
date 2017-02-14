@@ -6,7 +6,11 @@
 .navbar {
   position: fixed;
   margin: -1em;
+  width: 100%;
+  z-index: 99;
   margin-bottom: 8em;
+  background: white;
+  display: block;
 }
 
 .navbar-list {
@@ -27,4 +31,5 @@
 
 .clear-navbar {
   padding: 2em;
+  margin: 1em;
 }

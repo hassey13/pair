@@ -12,6 +12,9 @@ import { Provider } from 'react-redux'
 
 const store = createStore(rootReducer, applyMiddleware(promiseMiddleware) )
 
-ReactDOM.render( <Provider store={store}>
-  <Router history={browserHistory} routes={routes} />
-</Provider>, document.getElementById('container'))
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={browserHistory} routes={routes} />
+  </Provider>,
+  document.getElementById('container')
+)
