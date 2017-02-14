@@ -20,8 +20,6 @@ export const loginUser = (user) => {
   const response = axios.post(URL + 'login', user).then((response) => {
     sessionStorage.setItem('jwt', response.data.jwt)
     browserHistory.push("/users")
-    console.log(response)
-
     return response
   })
 

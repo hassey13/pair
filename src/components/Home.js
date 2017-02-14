@@ -1,16 +1,20 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 class Home extends Component {
-  componentDidMount(){
-  }
-
   render() {
     return (
       <div>
-        <p>{}</p>
+        <p>Email: { this.props.user.email }</p>
       </div>
     )
   }
 }
 
-export default (Home)
+const mapStateToProps = (state) => {
+  return {
+    user: state.users
+  }
+}
+
+export default connect(mapStateToProps, null)(Home)
