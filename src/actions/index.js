@@ -7,7 +7,7 @@ export const createUser = (user) => {
   const response = axios.post(URL + 'signup', user).then((data) => {
     sessionStorage.setItem('jwt', data.jwt)
     browserHistory.push("/users")
-    debugger
+
     return data
   })
 
