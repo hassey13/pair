@@ -7,5 +7,8 @@ axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 export const stockAdapter = {
   fetchStock: () => {
     return axios.get('stocks').then(response => response.data)
+  },
+  queryStocks: (query) => {
+    return axios.get(`/searchstocks/${query}`).then(response => response.data)
   }
 }
