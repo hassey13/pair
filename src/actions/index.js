@@ -27,3 +27,12 @@ export const fetchStocksOwned = () => {
     payload: response
   }
 }
+
+export const queryStocks = (query) => {
+  const response = stockAdapter.queryStocks(query)
+
+    return {
+    type: 'QUERY_STOCKS',
+    payload: response
+  }
+}
