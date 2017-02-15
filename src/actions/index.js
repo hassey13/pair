@@ -1,9 +1,7 @@
-import { browserHistory } from 'react-router'
-import { userAdapter } from '../adapters/UsersAdapter'
+import { userAdapter } from '../adapters/UserAdapter'
 import { stockAdapter } from '../adapters/StockAdapter'
 
 export const createUser = (user) => {
-
   const response = userAdapter.createUser(user)
 
   return {

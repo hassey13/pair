@@ -18,6 +18,7 @@ class Login extends Component {
       password: this.refs.password.value
     }
 
+    debugger
     this.props.loginUser(user)
   }
 
@@ -42,11 +43,10 @@ class Login extends Component {
       </div>
     );
   }
-
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({loginUser}, dispatch)
+  return bindActionCreators({ loginUser }, dispatch)
 }
 
 export default connect( null, mapDispatchToProps)(Login)
