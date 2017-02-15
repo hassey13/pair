@@ -3,9 +3,11 @@ import { connect } from 'react-redux'
 
 class Home extends Component {
   render() {
+    const user = this.props.user
+    
     return (
       <div>
-        <p>Email: { this.props.user.email }</p>
+        <p>Email: { user.email }</p>
       </div>
     )
   }
