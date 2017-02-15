@@ -6,6 +6,7 @@ import UserSignUp from './components/UserSignUp'
 import Login from './components/Login'
 import Home from './components/Home'
 import StockGrid from './components/StockGrid'
+import Profile from './components/Profile'
 
 
 export default (
@@ -15,5 +16,6 @@ export default (
     <Route path="signup" component={ UserSignUp } />
     <Route path="users" component={ Home } />
     <Route path="stocks" component={ StockGrid } />
+    <Route path="profile" component={ Profile } />
   </Route>
 )
