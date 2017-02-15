@@ -22,7 +22,6 @@ export const loginUser = (user) => {
 }
 
 export const fetchStocksOwned = () => {
-  const response = stockAdapter.fetchStock()
 
   return {
     type: 'FETCH_OWNED_STOCKS',
