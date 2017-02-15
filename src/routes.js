@@ -5,7 +5,7 @@ import App from './components/App'
 import UserSignUp from './components/UserSignUp'
 import Login from './components/Login'
 import Home from './components/Home'
-import StockGrid from './components/StockGrid'
+import StockList from './components/stocks/StockList'
 import Profile from './components/Profile'
 
 
@@ -15,7 +15,7 @@ export default (
     <Route path="login" component={ Login } />
     <Route path="signup" component={ UserSignUp } />
     <Route path="users" component={ Home } />
-    <Route path="stocks" component={ StockGrid } />
+    <Route path="stocks" component={ StockList } />
     <Route path="profile" component={ Profile } />
   </Route>
 )
