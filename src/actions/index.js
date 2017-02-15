@@ -22,7 +22,7 @@ export const loginUser = (user) => {
 export const fetchStocksOwned = () => {
   const response = stockAdapter.fetchStock()
 
-    return {
+  return {
     type: 'FETCH_STOCKS_OWNED',
     payload: response
   }
@@ -30,8 +30,7 @@ export const fetchStocksOwned = () => {
 
 export const queryStocks = (query) => {
   const response = stockAdapter.queryStocks(query)
-
-    return {
+  return {
     type: 'QUERY_STOCKS',
     payload: response
   }

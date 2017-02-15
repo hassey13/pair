@@ -8,7 +8,8 @@ export const stockAdapter = {
   fetchStock: () => {
     return axios.get('stocks').then(response => response.data)
   },
+
   queryStocks: (query) => {
-    return axios.get(`/searchstocks/${query}`).then(response => response.data)
+    return axios.get(`/searchstocks/${query}`).then(response => response)
   }
 }

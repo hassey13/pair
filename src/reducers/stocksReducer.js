@@ -10,6 +10,9 @@ export default function(state=[], action){
         symbols: state.symbols,
         data: [...state.data, action.payload]
       }
+    case 'QUERY_STOCKS':
+      return action.payload
+
     default:
       return state
   }
