@@ -18,7 +18,6 @@ class Login extends Component {
       password: this.refs.password.value
     }
 
-    debugger
     this.props.loginUser(user)
   }
 

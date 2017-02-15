@@ -4,20 +4,20 @@ import axios from 'axios'
 axios.defaults.baseURL = 'http://localhost:4000/api/v1/'
 axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
-const userAdapter = {
+export const userAdapter = {
   createUser: (user) => {
     return axios.post('signup', user).then((response) => {
       sessionStorage.setItem('jwt', response.jwt)
-      browserHistory.push("/users")
+      browserHistory.push("/profile")
 
       return response
     })
   },
 
-  loginUser: (user) => {
+  logUser: (user) => {
     return axios.post('login', user).then((response) => {
       sessionStorage.setItem('jwt', response.data.jwt)
-      browserHistory.push("/users")
+      browserHistory.push("/profile")
 
       return response
     })

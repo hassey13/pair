@@ -17,16 +17,15 @@ class StockList extends Component {
   render() {
     const stockList = this.props.stocks
 
-     if( stockList.symbols !== undefined ) {
-       return (
-         <div>
-         { stockList.symbols.map( ( stock, i ) => <StockCard key={i} stock={ stock } /> ) }
-         </div>
-       )
-     }
-     else {
-       return (<div></div>)
-     }
+    if( !stockList.symbols ){
+      return <div></div>
+    }
+
+    return (
+      <div>
+       { stockList.symbols.map( ( stock, i ) => <StockCard key={i} stock={ stock } /> ) }
+      </div>
+    )
   }
 }
 
