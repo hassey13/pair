@@ -3,7 +3,17 @@ import {connect} from 'react-redux'
 
 export class Profile extends Component {
   render() {
-    return <div />
+    return (
+      <div className='profile'>
+
+        <div className='profile__name'>
+
+        </div>
+
+
+        
+      </div>
+    )
   }
 }
 
