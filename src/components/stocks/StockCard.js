@@ -9,14 +9,15 @@ import { fetchStockCardData } from '../../actions/index'
 class StockCard extends Component {
 
   componentDidMount() {
-    this.props.fetchStockCardData(this.props.stock.symbol)
+    // this.props.fetchStockCardData(this.props.stock.ticker)
   }
 
   render() {
     return (
       <div className="stock-card">
-        <h3>{ this.props.stock.symbol }</h3>
-        <p>{ this.props.stock.company_name }</p>
+        <h3>{ this.props.stock.identifier }</h3>
+        <p>Name Here</p>
+        <p>101.09</p>
       </div>
     )
   }
