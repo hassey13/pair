@@ -5,6 +5,7 @@ import App from './components/App'
 import UserSignUp from './components/UserSignUp'
 import Login from './components/Login'
 import Home from './components/Home'
+import StockGrid from './components/StockGrid'
 
 
 export default (
@@ -13,5 +14,6 @@ export default (
     <Route path="login" component={ Login } />
     <Route path="signup" component={ UserSignUp } />
     <Route path="users" component={ Home } />
+    <Route path="stocks" component={ StockGrid } />
   </Route>
 )
