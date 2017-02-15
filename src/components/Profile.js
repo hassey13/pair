@@ -1,22 +1,27 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import { Link } from 'react-router'
 
 export class Profile extends Component {
   render() {
     return (
-      <div className='profile'>
+      <div className='profile row'>
 
-        <div className='sidepanel'>
+        <div className='sidepanel four columns'>
           <div className='sidepanel__avatar'></div>
+
           <p className='sidepanel__fullName'>Full Name</p>
           <p className='sidepanel__username'>Username</p>
-          <Link className='sidepanel__followers'>Followers</Link>
-          <Link className='sidepanel__following'>Following</Link>
-          <p className='sidepanel__bio'>WAKAWAKAWAKAWAKAWAKA</p>
+          <div className=' sidepanel__follow sidepanel__followers'><Link>Followers</Link></div> <div className='sidepanel__follow sidepanel__following'><Link>Following</Link></div>
+
+
           <div className='iconRow'>
             <div className='iconRow__icon'></div>
           </div>
+          <button className='button-primary'>Edit Profile</button>
         </div>
+        <div className='infopanel eight columns'>test</div>
+
 
 
 

@@ -7,6 +7,7 @@
   height: 300px;
 }
 
+
 .navbar {
   position: fixed;
   margin: -1em;
@@ -49,4 +50,36 @@ a {
   border: 1px solid black;
   text-align: center;
   margin-left: 2em;
+}
+
+.infopanel {
+  padding: 2em;
+}
+
+.sidepanel {
+  padding: 2em;
+}
+
+.sidepanel__avatar {
+  background-color: lightblue;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  margin-bottom: 2em;
+}
+
+.sidepanel__fullName {
+  margin: 0;
+}
+
+.sidepanel__username {
+  margin: 0;
+}
+
+.sidepanel__follow {
+  display: inline-block;
+  font-size: 0.6em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+
 }

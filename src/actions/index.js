@@ -22,8 +22,26 @@ export const loginUser = (user) => {
 export const fetchStocksOwned = () => {
   const response = stockAdapter.fetchStock()
 
-  return {
-    type: 'FETCH_OWNED_STOCKS',
+    return {
+    type: 'FETCH_STOCKS_OWNED',
     payload: response
   }
 }
+
+// export const fetchStockCardData = (ticker) => {
+//
+//   var config = { headers: { Authorization: 'Basic ' + btoa(ApiKey.password) }}
+//
+//   var baseURL = "https://api.intrinio.com/prices?ticker="
+//   var timePeriod = '&item=close_price&start_date=2017-02-13&end_date=2017-02-14'
+//   var URL = baseURL + ticker + timePeriod
+//
+//   const response = axios.get(URL, config).then(response => response.data)
+//
+//   console.log(response)
+//
+//   return {
+//     type: 'FETCH_STOCK_CARD_DATA',
+//     payload: response
+//   }
+// }
