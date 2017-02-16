@@ -83,7 +83,6 @@ export const followStock = (params) => {
   return {
     type: 'ADD_STOCK',
     payload: response
-
   }
 }
 
