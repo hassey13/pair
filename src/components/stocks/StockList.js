@@ -14,11 +14,6 @@ class StockList extends Component {
     this.props.fetchStocksOwned()
   }
 
-  handleSubmit(event) {
-    event.preventDefault()
-    this.props.followStock({symbol: 'NVDA', company_name: 'ERIC RULES!'})
-  }
-
   render() {
     var stockList = this.props.stocks
     if (stockList.length === 0 || 'na' in stockList) {
@@ -28,9 +23,6 @@ class StockList extends Component {
     return (
       <div>
         { stockList.map( ( stock, i ) => <StockCard key={i} stock={ stock } follow={ this.props.followStock }/> ) }
-        <form onSubmit={ this.handleSubmit.bind(this) }>
-          <button type='submit'>Follow Stock</button>
-        </form>
       </div>
     )
   }
@@ -46,10 +38,6 @@ function mapDispatchToProps(dispatch){
   return {
     fetchStocksOwned: function() {
       let action = fetchStocksOwned()
-      dispatch( action )
-    },
-    followStock: function(params) {
-      let action = followStock(params)
       dispatch( action )
     }
   }
