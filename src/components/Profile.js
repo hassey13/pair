@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
-import { Link } from 'react-router'
+import { Link, browserHistory } from 'react-router'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import StockList from './stocks/StockList'
-import { browserHistory } from 'react-router'
+import { getCurrentUser } from '../actions'
+
 
 export class Profile extends Component {
   constructor() {
@@ -11,13 +13,18 @@ export class Profile extends Component {
     this.handleEdit = this.handleEdit.bind(this)
   }
 
+  componentDidMount(){
+    this.props.getCurrentUser()
+  }
+
   handleEdit() {
     browserHistory.push("/edit")
   }
 
   render() {
     const user = this.props.user
-    
+    debugger
+
     return (
       <div className='profile row'>
         <div className='sidepanel four columns'>
@@ -45,10 +52,19 @@ export class Profile extends Component {
   }
 }
 
-export const mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     user: state.users
   }
 }
 
-export default connect(mapStateToProps, null)(Profile)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getCurrentUser: function() {
+      let action = getCurrentUser()
+      dispatch( action )
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile)

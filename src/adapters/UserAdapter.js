@@ -21,5 +21,9 @@ export const userAdapter = {
 
       return response
     })
+  },
+
+  getCurrentUser: () => {
+    return axios.get('users/1').then( response => response )
   }
 }

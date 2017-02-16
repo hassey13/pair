@@ -21,7 +21,7 @@ export default (
     <Route path="stocks" component={ StockList } />
     <Route path="profile" component={ Profile } />
 
-    <Route path="newcomment" component= { CommentForm } />
+    <Route path="newcomment" component={ CommentForm } />
 
     <Route path="edit" component={ Edit } />
 
