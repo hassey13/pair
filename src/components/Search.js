@@ -30,14 +30,13 @@ class Search extends React.Component {
                   <p>{`${stock.ticker}: ${stock.name}`}</p>
                 </div>
               )
-            }
+            })
           }
         </div>
       </div>
     )
   }
 }
-
 
 const mapStateToProps = (state) => {
   return {
