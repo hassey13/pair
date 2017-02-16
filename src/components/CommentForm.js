@@ -12,7 +12,7 @@ class CommentForm extends Component {
 
   handleChange(event){
     this.setState({
-      note: event.target.value
+      comment: event.target.value
     })
   }
 
