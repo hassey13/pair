@@ -43,8 +43,9 @@ a {
 
 .card {
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 500px;
+  width: 300px;
+  padding: 10px;
   border: 1px solid #eee;
   border-radius: 0.5em;
   margin-bottom: 2em;
