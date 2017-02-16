@@ -4,8 +4,11 @@ export default function(state=[], action){
       return action.payload
     case 'QUERY_STOCKS':
       return state
-      case 'ADD_STOCK':
-        return [...state, action.payload]
+    case 'ADD_STOCK':
+      return [...state, action.payload]
+    case 'REMOVE_STOCK':
+      const new_state = state.filter(stock => stock.identifier !== action.payload)
+      return new_state
     default:
       return state
   }

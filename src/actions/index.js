@@ -76,3 +76,12 @@ export const followStock = (params) => {
 
   }
 }
+
+export const unfollowStock = (params) => {
+  const response = stockAdapter.unfollowStock(params)
+  console.log(response)
+  return {
+    type: 'REMOVE_STOCK',
+    payload: response
+  }
+}
