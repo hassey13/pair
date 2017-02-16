@@ -16,7 +16,7 @@ class StockList extends Component {
 
   render() {
     var stockList = this.props.stocks
-    if (stockList.length === 0 ) {
+    if (stockList.length === 0 || stockList.data.data === 'no stocks') {
       return (<div></div>)
     }
     // debugger
