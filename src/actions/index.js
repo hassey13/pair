@@ -70,6 +70,7 @@ export function updateComment(comment){
 
 export const followStock = (params) => {
   const response = stockAdapter.followStock(params)
+  
   return {
     type: 'ADD_STOCK',
     payload: response
@@ -79,7 +80,7 @@ export const followStock = (params) => {
 
 export const unfollowStock = (params) => {
   const response = stockAdapter.unfollowStock(params)
-  console.log(response)
+  
   return {
     type: 'REMOVE_STOCK',
     payload: response
