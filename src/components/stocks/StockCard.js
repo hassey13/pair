@@ -20,11 +20,25 @@ class StockCard extends Component {
         <div className="card-text">
           <h3>{ this.props.stock.identifier }</h3>
           <p>{ this.props.stock.company_name }</p>
-          <p>Open: { this.props.stock.data[0].open }</p>
-          <p>Close: { this.props.stock.data[0].close }</p>
-          <p>High: { this.props.stock.data[0].high }</p>
-          <p>Low: { this.props.stock.data[0].low }</p>
-          <p>Market Cap: { this.props.stock.data[0].market_cap }</p>
+
+          <table>
+            <tr>
+              <td>Open:</td>
+              <td>{ this.props.stock.data[0].open }</td>
+              <td>Close:</td>
+              <td>{ this.props.stock.data[0].close }</td>
+            </tr>
+            <tr>
+              <td>High:</td>
+              <td>{ this.props.stock.data[0].high }</td>
+              <td>Low:</td>
+              <td>{ this.props.stock.data[0].low }</td>
+            </tr>
+            <tr>
+              <td>Market Cap:</td>
+              <td>{ this.props.stock.data[0].market_cap }</td>
+            </tr>
+          </table>
 
         </div>
       </div>
