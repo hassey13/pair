@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router'
 import {connect} from 'react-redux'
 import {fetchComments, getCurrentUser} from '../actions/index'
 
@@ -12,16 +11,14 @@ class CommentShow extends Component {
     render() {
       debugger
         const comments = this.props.comments
-        const user = this.props.user
         // const commentFiltered = comments.filter(comment => )
 
         // if (!comments){return <div></div>}
-
-            return (
-              <div>{comments}</div>
-            )
-                }
-              }
+        return (
+          <div>{comments}</div>
+        )
+    }
+}
 
 
 

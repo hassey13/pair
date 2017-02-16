@@ -1,6 +1,5 @@
 import _ from 'lodash'
 import axios from 'axios'
-import { browserHistory } from 'react-router'
 
 axios.defaults.baseURL = 'http://localhost:4000/api/v1/'
 axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
@@ -19,6 +18,6 @@ export const commentAdapter = {
             return _.debounce(() => {
                         axios.patch(`comments/${comment.id}`), comment.message.then(response => response.data)
                         }, 500)()
-                },
+                }
 
         }

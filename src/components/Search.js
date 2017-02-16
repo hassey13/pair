@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { queryStocks } from '../actions'
+import SearchResults from './SearchResults'
 
 class Search extends React.Component {
   constructor() {
@@ -18,18 +18,14 @@ class Search extends React.Component {
 
   render() {
     const stockSearch = this.props.stockSearch
-    debugger
+
     return (
       <div>
-        <input id='search' type='text' ref='search' onChange={ this.handleInput } />
+        <input id='search' type='text' ref='search' autoComplete='off' onChange={ this.handleInput } />
         <div>
           {
             stockSearch.map((stock, i) => {
-              return (
-                <div key={i}>
-                  <p>{`${stock.ticker}: ${stock.name}`}</p>
-                </div>
-              )
+              return <SearchResults key={i} ticker={ stock.ticker } name={ stock.name } />
             })
           }
         </div>
