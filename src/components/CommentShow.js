@@ -18,7 +18,9 @@ class CommentShow extends Component {
         // if (!comments){return <div></div>}
 
             return (
-              <div>{comments}</div>
+              <div>
+                {comments}
+              </div>
             )
                 }
               }

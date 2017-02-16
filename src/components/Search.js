@@ -30,27 +30,28 @@ class Search extends React.Component {
                   <p>{`${stock.ticker}: ${stock.name}`}</p>
                 </div>
               )
-            })
+            }
+              }
+              </div>
+              </div>
+            )
           }
-        </div>
-      </div>
-    )
-  }
-}
+          }
 
-const mapStateToProps = (state) => {
-  return {
-    stockSearch: state.search
-  }
-}
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    queryStocks: function(query) {
-      let action = queryStocks(query)
-      dispatch( action )
-    }
-  }
-}
+          const mapStateToProps = (state) => {
+            return {
+              stockSearch: state.search
+            }
+          }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search)
+          const mapDispatchToProps = (dispatch) => {
+            return {
+              queryStocks: function(query) {
+                let action = queryStocks(query)
+                dispatch( action )
+              }
+            }
+          }
+
+          export default connect(mapStateToProps, mapDispatchToProps)(Search)
