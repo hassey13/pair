@@ -3,7 +3,9 @@ export default function(state=[], action){
     case 'FETCH_STOCKS_OWNED':
       return action.payload
     case 'QUERY_STOCKS':
-      return action.payload
+      return state
+      case 'ADD_STOCK':
+        return [...state, action.payload]
     default:
       return state
   }
