@@ -3,6 +3,7 @@ import {IndexRoute, Route} from 'react-router'
 import App from './components/App'
 import CommentForm from './components/CommentForm.js'
 import CommentShow from './components/CommentShow.js'
+import ThreadedComments from './components/ThreadedComments.js'
 import Login from './components/Login'
 import Profile from './components/Profile'
 
@@ -23,6 +24,7 @@ export default (
     <Route path="profile" component={ Profile } />
     <Route path="newcomment" component={ CommentForm } />
     <Route path="comments" component={ CommentShow } />
+    <Route path="threadedcomments" component={ ThreadedComments } />
     <Route path="edit" component={ Edit } />
   </Route>
 )
