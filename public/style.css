@@ -47,11 +47,14 @@ a {
   width: 200px;
   border: 1px solid #eee;
   border-radius: 0.5em;
-  text-align: center;
   margin-bottom: 2em;
   margin-left: 2em;
   box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.25);
 
+}
+
+.card-text {
+  text-align: center;
 }
 
 .comment-card {
@@ -114,16 +117,21 @@ a {
 }
 
 .btn-clear {
-  display: inline-block;
-  position: relative;
-  padding: 0px 6px 2px 6px;
-  border-radius: 50%;
-  cursor: pointer;
+  position: relative !important;
+  padding: 0px 6px 2px 6px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
   background-color: #FF4545;
-}
-
-.clear-icon {
-  color: #fff;
-  font-family: Verdana;
-  font-size: 14px;
+  color: #fff !important;
+  font-family: Verdana !important;
+  font-size: 14px !important;
+  height: 20px !important;
+  text-align: center;
+  line-height: 0px;
+  letter-spacing: 0rem;
+  text-transform: inherit;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
 }
