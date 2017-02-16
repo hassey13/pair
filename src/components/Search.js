@@ -14,6 +14,7 @@ class Search extends React.Component {
     this.handleInput = this.handleInput.bind(this)
     this.handleFocus = this.handleFocus.bind(this)
     this.handleBlur = this.handleBlur.bind(this)
+    this.getSearchComponent = this.getSearchComponent.bind(this)
   }
 
   handleInput() {
@@ -42,14 +43,11 @@ class Search extends React.Component {
     }
   }
 
-  render() {
-    const stockSearch = this.props.stockSearch
-    let searchComponent = null
+  getSearchComponent(stockSearch){
+    let component = null
 
-    if(this.state.removeResults){
-      searchComponent = null
-    } else {
-      searchComponent = (
+    if(!this.state.removeResults){
+      component = (
         <div >
           {
             stockSearch.map((stock, i) => {
@@ -59,6 +57,13 @@ class Search extends React.Component {
         </div>
       )
     }
+
+    return component
+  }
+
+  render() {
+    const stockSearch = this.props.stockSearch
+    const searchComponent = this.getSearchComponent(stockSearch)
 
     return (
       <div>
