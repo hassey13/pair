@@ -48,8 +48,8 @@ export const fetchComments = () => {
 }
 
 
-export function addComment(messsage){
-  const comment = commentAdapter.createComment({message: message, })
+export function addComment(message){
+  const comment = commentAdapter.createComment({message: message })
 
   return {
     type: 'ADD_COMMENT',

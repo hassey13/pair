@@ -41,7 +41,7 @@ a {
     text-decoration: none;
 }
 
-.stock-card {
+.card {
     display: inline-block;
     height: 200px;
     width: 200px;
@@ -79,4 +79,8 @@ a {
     font-size: 0.6em;
     margin-right: 1em;
     margin-bottom: 2em;
+}
+
+.commentform {
+
 }

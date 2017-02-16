@@ -14,7 +14,7 @@ class StockCard extends Component {
 
   render() {
     return (
-      <div className="stock-card">
+      <div className="card">
         <h3>{ this.props.stock.symbol }</h3>
         <p>{ this.props.stock.company_name }</p>
       </div>

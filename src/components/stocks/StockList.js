@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 
 import StockCard from './StockCard'
 
-import { fetchStocksOwned } from '../../actions/index'
+import { fetchStocksOwned, followStock } from '../../actions/index'
 
 class StockList extends Component {
 
@@ -14,16 +14,23 @@ class StockList extends Component {
     this.props.fetchStocksOwned()
   }
 
-  render() {
-    const stockList = this.props.stocks
+  handleSubmit(event) {
+    event.preventDefault()
+    this.props.followStock({symbol: 'NVDA', company_name: 'ERIC RULES!'})
+  }
 
-    if( !stockList.symbols ){
-      return <div></div>
+  render() {
+    var stockList = this.props.stocks
+    if (stockList.length === 0 || 'na' in stockList) {
+      return (<div></div>)
     }
 
     return (
       <div>
-        { stockList.symbols.map( ( stock, i ) => <StockCard key={i} stock={ stock } /> ) }
+        { stockList.map( ( stock, i ) => <StockCard key={i} stock={ stock } follow={ this.props.followStock }/> ) }
+        <form onSubmit={ this.handleSubmit.bind(this) }>
+          <button type='submit'>Follow Stock</button>
+        </form>
       </div>
     )
   }
@@ -37,8 +44,12 @@ const mapStateToProps = (state) => {
 
 function mapDispatchToProps(dispatch){
   return {
-    fetchStocksOwned: function(){
+    fetchStocksOwned: function() {
       let action = fetchStocksOwned()
+      dispatch( action )
+    },
+    followStock: function(params) {
+      let action = followStock(params)
       dispatch( action )
     }
   }

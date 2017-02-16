@@ -12,7 +12,7 @@ export const commentAdapter = {
         },
 
         createComment: (comment) => {
-            return axios.post('comment', comment).then(response => response.data)
+            return axios.post('comments', comment).then(response => response.data)
         },
 
         updateComment: (comment) => {
