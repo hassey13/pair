@@ -129,3 +129,18 @@ a {
 #search {
   width: 40em;
 }
+
+.btn-clear {
+  display: inline-block;
+  position: relative;
+  padding: 0px 6px 2px 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #FF4545;
+}
+
+.clear-icon {
+  color: #fff;
+  font-family: Verdana;
+  font-size: 14px;
+}
