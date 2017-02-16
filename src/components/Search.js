@@ -22,9 +22,17 @@ class Search extends React.Component {
     return (
       <div>
         <input id='search' type='text' ref='search' onChange={ this.handleInput } />
-        <div>{stockSearch.map((stock, i) => {return <div key={i}>
-          <p>{`${stock.ticker}: ${stock.name}`}</p>
-        </div>})}</div>
+        <div>
+          {
+            stockSearch.map((stock, i) => {
+              return (
+                <div key={i}>
+                  <p>{`${stock.ticker}: ${stock.name}`}</p>
+                </div>
+              )
+            }
+          }
+        </div>
       </div>
     )
   }
