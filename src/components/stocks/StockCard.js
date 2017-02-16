@@ -16,8 +16,8 @@ class StockCard extends Component {
     return (
       <div className="stock-card">
         <h3>{ this.props.stock.identifier }</h3>
-        <p>Name Here</p>
-        <p>101.09</p>
+        <p>{ this.props.stock.company_name }</p>
+        <p>{ this.props.stock.data[0].value }</p>
       </div>
     )
   }
