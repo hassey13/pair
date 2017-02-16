@@ -48,7 +48,7 @@ export const fetchComments = () => {
 
 
 export function addComment(message){
-  const comment = commentAdapter.createComment({message: message })
+  const comment = commentAdapter.createComment({message: message, user_id: 1, stock_id: 1 })
 
   return {
     type: 'ADD_COMMENT',

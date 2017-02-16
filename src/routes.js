@@ -2,6 +2,7 @@ import {IndexRoute, Route} from 'react-router'
 
 import App from './components/App'
 import CommentForm from './components/CommentForm.js'
+import CommentShow from './components/CommentShow.js'
 import Login from './components/Login'
 import Profile from './components/Profile'
 
@@ -21,7 +22,9 @@ export default (
     <Route path="stocks" component={ StockList } />
     <Route path="profile" component={ Profile } />
 
-    <Route path="newcomment" component= { CommentForm } />
+    <Route path="newcomment" component={ CommentForm } />
+
+    <Route path="comments" component={ CommentShow } />
 
     <Route path="edit" component={ Edit } />
 
