@@ -25,7 +25,7 @@ class Search extends React.Component {
         <div>
           {
             stockSearch.map((stock, i) => {
-              return <SearchResults key={i} ticker={ stock.ticker } name={ stock.name } />
+              return <SearchResults key={i} symbol={ stock.ticker } company_name={ stock.name } />
             })
           }
         </div>
