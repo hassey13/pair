@@ -19,9 +19,10 @@ class StockList extends Component {
     if (stockList.length === 0 ) {
       return (<div></div>)
     }
+    // debugger
     return (
       <div>
-       { stockList.data.data.map( ( stock, i ) => <StockCard key={i} stock={ stock } /> ) }
+       { stockList.data.map( ( stock, i ) => <StockCard key={i} stock={ stock } /> ) }
       </div>
     )
   }
