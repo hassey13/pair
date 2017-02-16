@@ -27,12 +27,10 @@ class StockList extends Component {
 
     return (
       <div>
-
-       { stockList.map( ( stock, i ) => <StockCard key={i} stock={ stock } follow={ this.props.followStock }/> ) }
-       <form onSubmit={ this.handleSubmit.bind(this) }>
-         <button type='submit'>Follow Stock</button>
-       </form>
-
+        { stockList.map( ( stock, i ) => <StockCard key={i} stock={ stock } follow={ this.props.followStock }/> ) }
+        <form onSubmit={ this.handleSubmit.bind(this) }>
+          <button type='submit'>Follow Stock</button>
+        </form>
       </div>
     )
   }
