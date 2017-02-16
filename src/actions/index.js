@@ -65,6 +65,8 @@ export function updateComment(comment){
       id: comment.id,
       message: comment.message
     }
+  }
+}
 
 export const followStock = (params) => {
   const response = stockAdapter.followStock(params)

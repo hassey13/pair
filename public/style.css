@@ -54,13 +54,7 @@ a {
     text-decoration: none;
 }
 
-.card {
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-    border: 1px solid black;
-    text-align: center;
-    margin-left: 2em;
+
 
 .card {
   display: inline-block;
@@ -75,6 +69,28 @@ a {
 
 }
 
+.comment-card {
+  display: inline-block;
+  height: 150px;
+  width: 450px;
+  border: 1px solid #eee;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.comment-header {
+  padding-top: 1em;
+  text-align: left;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+.comment-input {
+  width: 300px;
+}
+
 .infopanel {
     padding: 2em;
 }
@@ -84,7 +100,7 @@ a {
 }
 
 .sidepanel__avatar {
-    background-color: lightblue;
+    background-color: blue;
     width: 5em;
     height: 5em;
     border-radius: 50%;
@@ -107,13 +123,7 @@ a {
     margin-bottom: 2em;
 }
 
-.commentform {
 
-  display: inline-block;
-  font-size: 0.6em;
-  margin-right: 1em;
-  margin-bottom: 2em;
-}
 
 
 #search {

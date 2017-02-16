@@ -29,10 +29,10 @@ class CommentForm extends Component {
     return (
 
 
-      <div className='card'>
-        <h4> Add Comment </h4>
+      <div className='comment-card'>
+        <h5 className="comment-header"> Add Comment </h5>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={this.state.comment}/>
+          <input className="comment-input" type="text" onChange={this.handleChange} value={this.state.comment}/>
 
 
           <button className='button-primary' type="submit"> Post </button>
