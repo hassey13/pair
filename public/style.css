@@ -46,9 +46,11 @@ a {
   display: inline-block;
   height: 200px;
   width: 200px;
-  border: 1px solid black;
+  border: 1px solid #eee;
+  border-radius: 0.5em;
   text-align: center;
   margin-left: 2em;
+  box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.25);
 }
 
 .infopanel {

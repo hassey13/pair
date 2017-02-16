@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-router'
-import { StockList } from './stocks/StockList'
+import StockList from './stocks/StockList'
 import { browserHistory } from 'react-router'
 
 export class Profile extends Component {
@@ -36,6 +36,7 @@ export class Profile extends Component {
         </div>
 
         <div className='infopanel eight columns'>
+          <StockList />
         </div>
 
       </div>
