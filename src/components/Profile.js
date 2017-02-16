@@ -26,7 +26,7 @@ export class Profile extends Component {
 
         <div className='infopanel eight columns'>
         </div>
-        
+
       </div>
     )
   }
