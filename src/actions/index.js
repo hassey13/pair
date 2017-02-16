@@ -1,5 +1,6 @@
-import { userAdapter } from '../adapters/UserAdapter'
+import { commentAdapter } from '../adapters/CommentAdapter'
 import { stockAdapter } from '../adapters/StockAdapter'
+import { userAdapter } from '../adapters/UserAdapter'
 
 export const createUser = (user) => {
   const response = userAdapter.createUser(user)
@@ -36,10 +37,40 @@ export const queryStocks = (query) => {
   }
 }
 
+export const fetchComments = () => {
+  const response = commentAdapter.fetchComments()
+
+    return {
+    type: 'FETCH_COMMENTS',
+    payload: response
+  }
+}
+
+
+export function addComment(message){
+  const comment = commentAdapter.createComment({message: message })
+
+  return {
+    type: 'ADD_COMMENT',
+    payload: comment
+  }
+}
+
+export function updateComment(comment){
+  commentAdapter.updateComment(comment)
+
+  return {
+    type: 'UPDATE_NOTE',
+    payload: {
+      id: comment.id,
+      message: comment.message
+    }
+
 export const followStock = (params) => {
   const response = stockAdapter.followStock(params)
   return {
     type: 'ADD_STOCK',
     payload: response
+
   }
 }

@@ -17,11 +17,12 @@ export class Profile extends Component {
 
   render() {
     const user = this.props.user
-
+    
     return (
       <div className='profile row'>
         <div className='sidepanel four columns'>
           <div className='sidepanel__avatar'></div>
+
 
           <p className='sidepanel__fullName'>{ `${ user.first_name } ${ user.last_name }` }</p>
           <p className='sidepanel__username'>{ user.username }</p>
