@@ -16,6 +16,7 @@ class StockCard extends Component {
         <form onSubmit={ this.handleSubmit.bind(this) }>
           <button type="submit" className="btn-clear">x</button>
         </form>
+
         <div className="card-text">
           <h3>{ this.props.stock.identifier }</h3>
           <p>{ this.props.stock.company_name }</p>
@@ -34,7 +35,6 @@ const mapStateToProps = (state) => {
 
 function mapDispatchToProps(dispatch){
   return {
-
     unfollowStock: function(params) {
       let action = unfollowStock(params)
       dispatch( action )
