@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { queryStocks } from '../actions'
 
-class Search extends React.Component {
+class SearchResults extends React.Component {
   constructor() {
     super()
 
