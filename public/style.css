@@ -1,5 +1,4 @@
 * {
-    font-family: Quicksand, sans-serif;
   font-family: Quicksand, sans-serif;
   /*background-color: rgba(70, 0, 123, 0.2)*/
 }
@@ -34,27 +33,13 @@ a {
 }
 
 .navbar-item {
-
     display: inline;
     padding: 0 0 0 1em;
-
 }
 
 .navbar-item>a {
     text-decoration: none;
 }
-
-
-.clear-navbar {
-    padding: 2em;
-    margin: 1em;
-}
-
-a {
-    text-decoration: none;
-}
-
-
 
 .card {
   display: inline-block;
@@ -87,6 +72,7 @@ a {
   padding-left: 1.5em;
   margin-bottom: 0.5em;
 }
+
 .comment-input {
   width: 300px;
 }
@@ -122,9 +108,6 @@ a {
     margin-right: 1em;
     margin-bottom: 2em;
 }
-
-
-
 
 #search {
   width: 40em;

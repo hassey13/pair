@@ -4,6 +4,8 @@ export default function(state=[], action){
       return action.payload.data.user
     case 'LOGIN_USER':
       return action.payload.data.user
+    case 'GET_CURRENT_USER':
+      return action.payload.data
     default:
       return state
   }

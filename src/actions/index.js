@@ -20,6 +20,15 @@ export const loginUser = (user) => {
   }
 }
 
+export const getCurrentUser = (user) => {
+  const response = userAdapter.getCurrentUser()
+
+  return {
+    type: 'GET_CURRENT_USER',
+    payload: response
+  }
+}
+
 export const fetchStocksOwned = () => {
   const response = stockAdapter.fetchStock()
 
@@ -45,7 +54,6 @@ export const fetchComments = () => {
     payload: response
   }
 }
-
 
 export function addComment(message){
   const comment = commentAdapter.createComment({message: message, user_id: 1, stock_id: 1 })

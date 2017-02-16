@@ -21,12 +21,8 @@ export default (
     <Route path="signup" component={ UserSignUp } />
     <Route path="stocks" component={ StockList } />
     <Route path="profile" component={ Profile } />
-
     <Route path="newcomment" component={ CommentForm } />
-
     <Route path="comments" component={ CommentShow } />
-
     <Route path="edit" component={ Edit } />
-
   </Route>
 )
