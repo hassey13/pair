@@ -1,6 +1,7 @@
 import { commentAdapter } from '../adapters/CommentAdapter'
 import { stockAdapter } from '../adapters/StockAdapter'
 import { userAdapter } from '../adapters/UserAdapter'
+import { searchAdapter } from '../adapters/SearchAdapter'
 
 export const createUser = (user) => {
   const response = userAdapter.createUser(user)
@@ -39,7 +40,7 @@ export const fetchStocksOwned = () => {
 }
 
 export const queryStocks = (query) => {
-  const response = stockAdapter.queryStocks(query)
+  const response = searchAdapter.queryStocks(query)
   return {
     type: 'QUERY_STOCKS',
     payload: response
