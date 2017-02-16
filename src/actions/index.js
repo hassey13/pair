@@ -55,8 +55,8 @@ export const fetchComments = () => {
   }
 }
 
-export function addComment(message){
-  const comment = commentAdapter.createComment({message: message, user_id: 1, stock_id: 1 })
+export function addComment(commentParams){
+  const comment = commentAdapter.createComment(commentParams)
 
   return {
     type: 'ADD_COMMENT',
@@ -78,7 +78,7 @@ export function updateComment(comment){
 
 export const followStock = (params) => {
   const response = stockAdapter.followStock(params)
-  
+
   return {
     type: 'ADD_STOCK',
     payload: response
@@ -88,7 +88,7 @@ export const followStock = (params) => {
 
 export const unfollowStock = (params) => {
   const response = stockAdapter.unfollowStock(params)
-  
+
   return {
     type: 'REMOVE_STOCK',
     payload: response

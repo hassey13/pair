@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router'
 import {connect} from 'react-redux'
-import {fetchComments} from '../actions/index'
+import {fetchComments, getCurrentUser} from '../actions/index'
 
 class CommentShow extends Component {
     componentDidMount() {
+        this.props.getCurrentUser()
         this.props.fetchComments()
     }
 
@@ -17,7 +18,7 @@ class CommentShow extends Component {
         // if (!comments){return <div></div>}
 
             return (
-              <div>{comments.map(comment => <p>{comment.message}</p>)}</div>
+              <div>{comments}</div>
             )
                 }
               }
@@ -31,13 +32,19 @@ class CommentShow extends Component {
     }
   }
 
-  function mapDispatchToProps(dispatch) {
+
+
+  function mapDispatchToProps(dispatch){
     return {
       fetchComments: function() {
         let action = fetchComments()
         dispatch(action)
+      },
+      getCurrentUser: function() {
+        let action = getCurrentUser()
+        dispatch( action )
       }
     }
   }
 
-  export default connect(mapStateToProps, mapDispatchToProps)(CommentShow)
+  export default connect( mapStateToProps, mapDispatchToProps )( CommentShow )

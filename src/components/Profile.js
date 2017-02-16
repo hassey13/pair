@@ -33,8 +33,8 @@ export class Profile extends Component {
 
           <p className='sidepanel__fullName'>{ `${ user.first_name } ${ user.last_name }` }</p>
           <p className='sidepanel__username'>{ user.username }</p>
-          <div className=' sidepanel__follow sidepanel__followers'><Link>Followers</Link></div>
-          <div className='sidepanel__follow sidepanel__following'><Link>Following</Link></div>
+          <div className=' sidepanel__follow sidepanel__followers'><Link>Friends</Link></div>
+
 
           <div className='iconRow'>
             <div className='iconRow__icon'></div>
