@@ -17,6 +17,10 @@ class SearchResults extends Component {
   }
 
   render() {
+    if( this.props.removeResults ){
+        return null
+    }
+
     return (
       <div id="search-results-card">
         <div className='row'>
