@@ -16,7 +16,7 @@ class Search extends React.Component {
   }
 
   render() {
-    let stocks = this.props.stocks
+    // let stocks = this.props.stocks
     return <input id='search' type='text' ref='search' onChange={ this.handleInput } />
   }
 }

@@ -35,3 +35,11 @@ export const queryStocks = (query) => {
     payload: response
   }
 }
+
+export const followStock = (params) => {
+  const response = stockAdapter.followStock(params)
+  return {
+    type: 'ADD_STOCK',
+    payload: response
+  }
+}
