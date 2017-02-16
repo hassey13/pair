@@ -1,9 +1,20 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-router'
-import { StockList } from './stocks/StockList'
+import StockList from './stocks/StockList'
+import { browserHistory } from 'react-router'
 
 export class Profile extends Component {
+  constructor() {
+    super()
+
+    this.handleEdit = this.handleEdit.bind(this)
+  }
+
+  handleEdit() {
+    browserHistory.push("/edit")
+  }
+
   render() {
     const user = this.props.user
     
@@ -22,10 +33,11 @@ export class Profile extends Component {
             <div className='iconRow__icon'></div>
           </div>
 
-          <button className='button-primary'>Edit Profile</button>
+          <button className='button-primary' onClick={ this.handleEdit } >Edit Profile</button>
         </div>
 
         <div className='infopanel eight columns'>
+          <StockList />
         </div>
 
       </div>
