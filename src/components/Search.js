@@ -13,22 +13,37 @@ class Search extends React.Component {
   handleInput() {
     let query = this.refs.search.value
     this.props.queryStocks(query)
+    console.log(query)
   }
 
   render() {
-    // let stocks = this.props.stocks
-    return <input id='search' type='text' ref='search' onChange={ this.handleInput } />
+    const stockSearch = this.props.stockSearch
+    debugger
+    return (
+      <div>
+        <input id='search' type='text' ref='search' onChange={ this.handleInput } />
+        <div>{stockSearch.map((stock, i) => {return <div key={i}>
+          <p>{`${stock.ticker}: ${stock.name}`}</p>
+        </div>})}</div>
+      </div>
+    )
   }
 }
 
-export const mapStateToProps = (state) => {
+
+const mapStateToProps = (state) => {
   return {
-    stocks: state.stocks
+    stockSearch: state.search
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ queryStocks }, dispatch)
+  return {
+    queryStocks: function(query) {
+      let action = queryStocks(query)
+      dispatch( action )
+    }
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search)

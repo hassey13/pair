@@ -12,7 +12,7 @@ export default function Navbar(props) {
     <div className="navbar">
       <ul className="navbar-list">
         <li className="navbar-item"><Link to="/profile">Pair</Link></li>
-        <li className="navbar-item"><Link to="/about">About</Link></li>
+        <li className="navbar-item"><Link >About</Link></li>
         <li className="navbar-item"><Link to="/discover">Discover</Link></li>
         <li className="navbar-item"><LogOutLink/></li>
         <li className="navbar-item"><Search/></li>
