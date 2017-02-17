@@ -19,7 +19,7 @@ class StockCard extends Component {
 
         <div className="card-text">
           <div>
-            <h3>{ this.props.stock.ticker }</h3>
+            <h5>{ this.props.stock.ticker }</h5>
             <p>{ this.props.stock.company_name }</p>
           </div>
 
