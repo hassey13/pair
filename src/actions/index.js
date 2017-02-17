@@ -97,8 +97,8 @@ export const unfollowStock = (params) => {
   }
 }
 
-export const fetchFriends = () => {
-  const response = friendsAdapter.fetchFriend()
+export const fetchFollowing = () => {
+  const response = friendsAdapter.fetchFollowing()
 
   return {
     type: 'FETCH_FRIENDS',

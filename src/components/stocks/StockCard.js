@@ -22,6 +22,7 @@ class StockCard extends Component {
             <h5>{ this.props.stock.ticker }</h5>
             <p>{ this.props.stock.company_name }</p>
             <img src="graph.png" alt="graph" className="graph" />
+            <p>{ this.props.stock.data[0].last_price }</p>
           </div>
         </div>
       </div>

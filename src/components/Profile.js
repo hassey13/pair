@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import { Link, browserHistory } from 'react-router'
 import { connect } from 'react-redux'
+
 import StockList from './stocks/StockList'
+import FollowingList from './friendships/FollowingList'
+
 import { getCurrentUser } from '../actions'
 
 export class Profile extends Component {
@@ -50,6 +53,8 @@ export class Profile extends Component {
             onClick={ this.handleEdit.bind(this, user) } >
               Edit Profile
           </button>
+
+          <FollowingList />
         </div>
 
         <div className='infopanel eight columns'>
