@@ -18,7 +18,7 @@ class Search extends React.Component {
 
   render() {
     const stockSearch = this.props.stockSearch
-    debugger
+    
     return (
       <div>
         <input id='search' type='text' ref='search' onChange={ this.handleInput } />

@@ -1,42 +1,36 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { Button, Comment, Form, Header } from 'semantic-ui-react'
+import { Button, Comment, Form, Header} from 'semantic-ui-react'
 import { addComment, getCurrentUser } from '../actions'
 
 
 class ThreadedComments extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      comment: '',
-      user_id: '',
-      stock_id: ''
-  }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-  }
+  state = {formData: {}}
+
 
   componentDidMount(){
     this.props.getCurrentUser()
   }
 
-  handleChange(event){
-    this.setState({
-      comment: event.target.value,
-      user_id: this.props.user.id,
-      stock_id: ''
-    })
-  }
 
-  handleSubmit(event){
-    const message = this.state.comment
+  handleChange = (e, { value }) => this.setState({
+    comment: value,
+    user_id: this.props.user.id,
+    stock_id: ''
+  })
+
+
+
+  handleSubmit = (e, { formData }) => {
+    e.preventDefault()
+    const message = formData.message
     const userID = this.props.user.id
     const commentParams = {
       message: message,
       user_id: userID,
       stock_id: 1
     }
-    event.preventDefault()
+
     this.props.addComment( commentParams)
     this.setState({comment: ''})
   }
@@ -62,11 +56,12 @@ class ThreadedComments extends Component {
         </Comment.Content>
       </Comment>
 
-      
+
 
       <Form reply onSubmit={this.handleSubmit}>
-        <textarea onChange={this.handleChange} value={this.state.comment}></textarea>
-        <Button content='Add Comment' labelPosition='left' icon='edit' primary />
+
+        <Form.TextArea name='message' onChange={this.handleChange} value={this.state.comment} autoHeight/>
+        <button type="submit" labelPosition='left' className="button-primary">Add Comment</button>
       </Form>
     </Comment.Group>
   )
