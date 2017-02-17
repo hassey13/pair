@@ -27,9 +27,9 @@ class SearchResults extends Component {
     }
 
     return (
-      <div id="search-results-card" onClick={ this.handleResultClick }>
+      <div id="search-results-card">
         <div className='row'>
-          <div className='eight columns'>
+          <div className='eight columns' onClick={ this.handleResultClick }>
             <p className="search-results-text">
               { this.props.company_name }
               <br/>
