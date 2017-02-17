@@ -7,7 +7,7 @@ class StockCard extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    this.props.unfollowStock({ticker: this.props.stock.identifier})
+    this.props.unfollowStock({ticker: this.props.stock.ticker})
   }
 
   render() {
