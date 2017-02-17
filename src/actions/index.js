@@ -42,6 +42,7 @@ export const fetchStocksOwned = () => {
 
 export const queryStocks = (query) => {
   const response = searchAdapter.queryStocks(query)
+
   return {
     type: 'QUERY_STOCKS',
     payload: response

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 // import { bindActionCreators } from 'redux'
 
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 import StockCard from './StockCard'
 
@@ -22,7 +22,9 @@ class StockList extends Component {
 
     return (
       <div>
-        { stockList.map( ( stock, i ) => <StockCard key={i} stock={ stock } /> ) }
+      {
+        stockList.map( ( stock, i ) => <StockCard key={i} stock={ stock } /> )
+      }
       </div>
     )
   }

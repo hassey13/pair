@@ -12,7 +12,7 @@ class SearchResults extends Component {
 
   handleFollow() {
     this.props.followStock({
-      symbol: this.props.symbol,
+      ticker: this.props.ticker,
       company_name: this.props.company_name
     })
   }
@@ -33,7 +33,7 @@ class SearchResults extends Component {
             <p className="search-results-text">
               { this.props.company_name }
               <br/>
-              { this.props.symbol }
+              { this.props.ticker }
             </p>
           </div>
 
