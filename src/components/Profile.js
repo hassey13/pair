@@ -27,9 +27,9 @@ export class Profile extends Component {
       <div className='profile row'>
         <div className='sidepanel four columns'>
           <img src="profile_pic.png" alt="profile_pic" className='sidepanel__avatar' />
-
           <p className='sidepanel__fullName'>{ `${ user.first_name } ${ user.last_name }` }</p>
           <p className='sidepanel__username'>{ user.username }</p>
+
           <div className=' sidepanel__follow sidepanel__followers'><Link>Friends</Link></div>
 
           <div className='iconRow'>

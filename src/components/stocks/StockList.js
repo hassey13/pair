@@ -22,9 +22,9 @@ class StockList extends Component {
 
     return (
       <div>
-      {
-        stockList.map( ( stock, i ) => <StockCard key={i} stock={ stock } /> )
-      }
+        {
+          stockList.map( ( stock, i ) => <StockCard key={i} stock={ stock } /> )
+        }
       </div>
     )
   }
