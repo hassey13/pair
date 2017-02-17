@@ -72,22 +72,6 @@ a {
     text-decoration: none;
 }
 
-.card {
-  display: inline-block;
-  height: 500px;
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #eee;
-  border-radius: 0.5em;
-  margin-bottom: 2em;
-  margin-left: 2em;
-  box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.25);
-}
-
-.card-text {
-  text-align: center;
-}
-
 .comment-card {
   display: inline-block;
   height: 150px;
@@ -112,7 +96,7 @@ a {
 }
 
 .infopanel {
-    padding: 2em;
+
 }
 
 .sidepanel {
@@ -136,25 +120,40 @@ a {
 }
 
 .sidepanel__follow {
-
     display: inline-block;
     font-size: 0.6em;
     margin-right: 1em;
     margin-bottom: 2em;
 }
 
+.card {
+  display: inline-block;
+  height: 250px;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.25);
+}
+
+.card-text {
+  text-align: center;
+}
+
 .btn-clear {
   position: absolute;
-  margin-left: 295px;
+  margin-left: 145px;
   margin-top: -21px;
-  padding: 16px 11px 19px 11px !important;
-  border-radius: 50% !important;
+  padding: 13px 9px 14px 9px !important;
+  border-radius: 100% !important;
   background-color: #FF7474;
   color: #fff !important;
   font-family: Verdana !important;
-  font-size: 21px !important;
+  font-size: 14px !important;
   font-weight: 300;
-  height: 20px !important;
+  height: 10px !important;
   text-align: center;
   line-height: 0px;
   letter-spacing: 0rem;
@@ -166,10 +165,10 @@ a {
 }
 
 .graph {
-  height: 200px;
-  width: 290px;
+  height: 100px;
+  width: 145px;
 }
 
 .card-friend {
-  
+
 }
