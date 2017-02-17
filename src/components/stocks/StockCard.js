@@ -7,7 +7,7 @@ class StockCard extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    this.props.unfollowStock({symbol: this.props.stock.identifier})
+    this.props.unfollowStock({ticker: this.props.stock.identifier})
   }
 
   render() {
@@ -27,7 +27,7 @@ class StockCard extends Component {
           </div>
           <div>
             <table>
-              <tbody>  
+              <tbody>
                 <tr>
                   <td>Open:</td>
                   <td>{ this.props.stock.data[0].open }</td>
