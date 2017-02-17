@@ -33,6 +33,27 @@ class Search extends React.Component {
     console.log(`Focus ${ this.state.removeResults }`)
   }
 
+  render() {
+    const stockSearch = this.props.stockSearch
+    const searchComponent = this.getSearchComponent(stockSearch)
+
+    return (
+      <div id='search-nav'>
+        <input
+          id='search'
+          type='text'
+          ref='search'
+          autoComplete='off'
+          onChange={ this.handleInput }
+          onFocus={ this.handleFocus }
+          onBlur={ this.handleBlur }
+        />
+
+        { searchComponent }
+      </div>
+    )
+  }
+
   queryUnlessBlank() {
     const query = this.refs.search.value
     if(query !== ''){
@@ -59,18 +80,6 @@ class Search extends React.Component {
     }
 
     return component
-  }
-
-  render() {
-    const stockSearch = this.props.stockSearch
-    const searchComponent = this.getSearchComponent(stockSearch)
-
-    return (
-      <div>
-        <input id='search' type='text' ref='search' autoComplete='off' onChange={ this.handleInput } onFocus={ this.handleFocus } onBlur={ this.handleBlur }/>
-        { searchComponent }
-      </div>
-    )
   }
 }
 

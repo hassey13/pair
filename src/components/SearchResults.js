@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { browserHistory } from 'react-router'
 import { connect } from 'react-redux'
 import { followStock } from '../actions'
 
@@ -16,17 +17,24 @@ class SearchResults extends Component {
     })
   }
 
+  handleResultClick() {
+    browserHistory.push('/stock')
+  }
+
   render() {
     if( this.props.removeResults ){
         return null
     }
 
     return (
-      <div id="search-results-card">
+      <div id="search-results-card" onClick={ this.handleResultClick }>
         <div className='row'>
           <div className='eight columns'>
-            <p>{ this.props.company_name }</p>
-            <p>{ this.props.symbol }</p>
+            <p className="search-results-text">
+              { this.props.company_name }
+              <br/>
+              { this.props.symbol }
+            </p>
           </div>
 
           <div className='four columns'>
