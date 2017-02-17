@@ -22,24 +22,28 @@ class StockCard extends Component {
             <h3>{ this.props.stock.identifier }</h3>
             <p>{ this.props.stock.company_name }</p>
           </div>
+
           <div>
             <img src="graph.png" alt="graph" className="graph" />
           </div>
+
           <div>
             <table>
-              <tbody>
+              <tbody>  
                 <tr>
                   <td>Open:</td>
                   <td>{ this.props.stock.data[0].open }</td>
                   <td>Close:</td>
                   <td>{ this.props.stock.data[0].close }</td>
                 </tr>
+
                 <tr>
                   <td>High:</td>
                   <td>{ this.props.stock.data[0].high }</td>
                   <td>Low:</td>
                   <td>{ this.props.stock.data[0].low }</td>
                 </tr>
+
                 <tr>
                   <td>Market Cap:</td>
                   <td>{ this.props.stock.data[0].market_cap }</td>
@@ -47,7 +51,6 @@ class StockCard extends Component {
               </tbody>
             </table>
           </div>
-
         </div>
       </div>
     )

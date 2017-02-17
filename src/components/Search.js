@@ -24,7 +24,6 @@ class Search extends React.Component {
 
   handleBlur() {
     setTimeout(()=>{ this.setState({ removeResults: true }) }, 250)
-
     console.log(`Blur ${ this.state.removeResults }`)
   }
 
@@ -69,10 +68,10 @@ class Search extends React.Component {
 
     if(!this.state.removeResults){
       component = (
-        <div >
+        <div>
           {
             stockSearch.map((stock, i) => {
-              return <SearchResults key={i} symbol={ stock.ticker } company_name={ stock.name } />
+              return <SearchResults key={i} ticker={ stock.ticker } company_name={ stock.name } />
             })
           }
         </div>

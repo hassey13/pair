@@ -37,9 +37,16 @@ a {
     height: 300px;
 }
 
+#nav-logo {
+    width: 2.5em;
+    padding: 0 2em 0 2em;
+    margin-bottom: -0.5em;
+}
+
 .navbar {
   position: fixed;
   margin: -1em;
+  padding: 0 0 1em 0;
   width: 100%;
   height: 5em;
   z-index: 99;
@@ -54,15 +61,14 @@ a {
 .navbar-list {
     list-style-type: none;
     margin: 2em 0 2em 0;
-    padding: 0;
 }
 
 .navbar-item {
     display: inline;
-    padding: 0 0 0 1em;
+    padding: 0 2em 0 2em;
 }
 
-.navbar-item>a {
+.navbar-item > a {
     text-decoration: none;
 }
 
