@@ -4,20 +4,21 @@ import { connect } from 'react-redux'
 import StockList from './stocks/StockList'
 import { getCurrentUser } from '../actions'
 
-
 export class Profile extends Component {
-  constructor() {
-    super()
-
-    this.handleEdit = this.handleEdit.bind(this)
-  }
-
   componentDidMount(){
     this.props.getCurrentUser()
   }
 
-  handleEdit() {
-    browserHistory.push("/edit")
+  handleEdit(user) {
+    browserHistory.push({
+      pathname: "/edit",
+      user: {
+        first_name: user.first_name,
+        last_name: user.last_name,
+        username: user.username,
+        email: user.email
+      }
+    })
   }
 
   render() {
@@ -26,17 +27,29 @@ export class Profile extends Component {
     return (
       <div className='profile row'>
         <div className='sidepanel four columns'>
-          <img src="profile_pic.png" alt="profile_pic" className='sidepanel__avatar' />
-          <p className='sidepanel__fullName'>{ `${ user.first_name } ${ user.last_name }` }</p>
+          <img
+            src="profile_pic.png"
+            alt="profile_pic"
+            className='sidepanel__avatar'
+          />
+          <p className='sidepanel__fullName'>
+            { `${ user.first_name } ${ user.last_name }` }
+          </p>
           <p className='sidepanel__username'>{ user.username }</p>
 
-          <div className=' sidepanel__follow sidepanel__followers'><Link>Friends</Link></div>
+          <div className=' sidepanel__follow sidepanel__followers'>
+            <Link>Friends</Link>
+          </div>
 
           <div className='iconRow'>
             <div className='iconRow__icon'></div>
           </div>
 
-          <button className='button-primary' onClick={ this.handleEdit } >Edit Profile</button>
+          <button
+            className='button-primary'
+            onClick={ this.handleEdit.bind(this, user) } >
+              Edit Profile
+          </button>
         </div>
 
         <div className='infopanel eight columns'>

@@ -11,7 +11,7 @@ export default function Navbar(props) {
   return (
     <div className="navbar">
       <ul className="navbar-list">
-        <li className="navbar-item"><Link to="/profile"><img id='nav-logo' src={require('../../public/pear.png')}/></Link></li>
+        <li className="navbar-item"><Link to="/profile"><img id='nav-logo' src='pear.png' alt='logo'/></Link></li>
         <li className="navbar-item"><Link >About</Link></li>
         <li className="navbar-item"><Link to="/discover">Discover</Link></li>
         <li className="navbar-item"><LogOutLink/></li>
