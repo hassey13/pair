@@ -7,7 +7,7 @@ class StockCard extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    this.props.unfollowStock({ticker: this.props.stock.identifier})
+    this.props.unfollowStock({ticker: this.props.stock.ticker})
   }
 
   render() {
@@ -19,7 +19,7 @@ class StockCard extends Component {
 
         <div className="card-text">
           <div>
-            <h3>{ this.props.stock.identifier }</h3>
+            <h3>{ this.props.stock.ticker }</h3>
             <p>{ this.props.stock.company_name }</p>
           </div>
 
@@ -29,7 +29,7 @@ class StockCard extends Component {
 
           <div>
             <table>
-              <tbody>  
+              <tbody>
                 <tr>
                   <td>Open:</td>
                   <td>{ this.props.stock.data[0].open }</td>
