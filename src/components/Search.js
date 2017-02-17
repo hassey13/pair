@@ -23,7 +23,7 @@ class Search extends React.Component {
   }
 
   handleBlur() {
-    setTimeout(()=>{ this.setState({ removeResults: true }) }, 100)
+    setTimeout(()=>{ this.setState({ removeResults: true }) }, 250)
 
     console.log(`Blur ${ this.state.removeResults }`)
   }
