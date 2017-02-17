@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 
 import StockCard from './StockCard'
 
-import { fetchStocksOwned, followStock } from '../../actions/index'
+import { fetchStocksOwned } from '../../actions/index'
 
 class StockList extends Component {
 
@@ -22,7 +22,7 @@ class StockList extends Component {
 
     return (
       <div>
-        { stockList.map( ( stock, i ) => <StockCard key={i} stock={ stock } follow={ this.props.followStock }/> ) }
+        { stockList.map( ( stock, i ) => <StockCard key={i} stock={ stock } /> ) }
       </div>
     )
   }

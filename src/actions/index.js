@@ -2,6 +2,7 @@ import { commentAdapter } from '../adapters/CommentAdapter'
 import { stockAdapter } from '../adapters/StockAdapter'
 import { userAdapter } from '../adapters/UserAdapter'
 import { searchAdapter } from '../adapters/SearchAdapter'
+import { friendsAdapter } from '../adapters/FriendsAdapter'
 
 export const createUser = (user) => {
   const response = userAdapter.createUser(user)
@@ -91,6 +92,15 @@ export const unfollowStock = (params) => {
 
   return {
     type: 'REMOVE_STOCK',
+    payload: response
+  }
+}
+
+export const fetchFriends = () => {
+  const response = friendsAdapter.fetchFriend()
+
+  return {
+    type: 'FETCH_FRIENDS',
     payload: response
   }
 }
