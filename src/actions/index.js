@@ -105,10 +105,3 @@ export const fetchFollowing = () => {
     payload: response
   }
 }
-
-export function updateCurrentStock(stockTicker){
-  return {
-    type: 'UPDATE_CURRENT_STOCK',
-    payload: stockTicker
-  }
-}
