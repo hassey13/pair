@@ -17,7 +17,7 @@ export default (
     <Route path="login" component={ Login } />
     <Route path="signup" component={ UserSignUp } />
     <Route path="stocks" component={ StockList } />
-    <Route path="stock" component={ Stock } />
+    <Route path="stock/:ticker" component={ Stock } />
     <Route path="profile" component={ Profile } />
     <Route path="newcomment" component={ CommentForm } />
     <Route path="comments" component={ CommentShow } />
