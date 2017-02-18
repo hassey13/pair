@@ -7,25 +7,27 @@ import { loginUser } from '../actions/index'
 class Login extends Component {
   constructor(props) {
     super(props)
+
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(event){
     event.preventDefault()
 
-    const user = {
+    const credentials = {
       email: this.refs.email.value,
       password: this.refs.password.value
     }
 
-    this.props.loginUser(user)
+    this.props.loginUser(credentials)
+    debugger
   }
 
   render() {
     return (
       <div>
         <h2>Log In</h2>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={ this.handleSubmit }>
             <div className='row'>
               <div className='four columns'>
                 <label>E-mail</label>
@@ -44,8 +46,14 @@ class Login extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    session: state.session
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ loginUser }, dispatch)
 }
 
-export default connect( null, mapDispatchToProps)(Login)
+export default connect( mapDispatchToProps, mapDispatchToProps)(Login)
