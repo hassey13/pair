@@ -3,7 +3,7 @@ export default function(state=[], action){
     case 'CREATE_USER':
       return action.payload.data.user
     case 'LOGIN_USER':
-      return action.payload.data.user
+      return !!sessionStorage.jwt
     case 'GET_CURRENT_USER':
       return action.payload.data
     default:

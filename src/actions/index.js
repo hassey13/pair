@@ -17,8 +17,8 @@ export const loginUser = (user) => {
   const response = userAdapter.logUser(user)
 
   return {
-    type: 'LOGIN_USER',
-    payload: response
+    type: '',
+    payload: ''
   }
 }
 

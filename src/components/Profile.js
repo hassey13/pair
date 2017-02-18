@@ -26,7 +26,7 @@ export class Profile extends Component {
 
   render() {
     const user = this.props.user
-
+    debugger
     return (
       <div className='profile row'>
         <div className='sidepanel four columns'>

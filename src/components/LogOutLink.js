@@ -9,7 +9,7 @@ class LogOutLink extends Component {
   }
 
   handleLogOut() {
-    sessionStorage.clear()
+    sessionStorage.removeItem('jwt')
   }
 
   render() {
