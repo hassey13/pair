@@ -3,7 +3,6 @@ import usersReducer from './usersReducer'
 import stocksReducer from './stocksReducer'
 import commentsReducer from './commentsReducer'
 import searchReducer from './searchReducer'
-import currentStockReducer from './currentStockReducer'
 import sessionReducer from './sessionReducer'
 
 const rootReducer = combineReducers({
@@ -11,7 +10,6 @@ const rootReducer = combineReducers({
   stocks: stocksReducer,
   comments: commentsReducer,
   search: searchReducer,
-  currentStock: currentStockReducer
   session: sessionReducer
 })
 
